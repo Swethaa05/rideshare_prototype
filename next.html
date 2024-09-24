@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container6">
+        <div class="profile-header">
+            <h2>Shyam</h2>
+            <div class="rating">
+            
+                <span id="review-rating">Pick Up:</span><br> 
+                <span id="review-count">Drop Point:</span>
+            </div>
+        </div>
+        
+        <div class="car-section">
+            <img class="car-image" src="car.png" alt="Car">
+        </div>
+        
+        
+
+        <div class="buttons-section">
+            <button class="book-later" id="book-later">Deny Ride</button>
+            <button class="ride-now" id="ride-now-btn">Accept Ride</button>
+
+
+        </div>
+    </div>
+
+    <script>
+            // Add event listener to "Ride Now" button
+            document.getElementById('book-later').addEventListener('click', function() {
+        window.location.href = 'driver1.html'; // Redirect to ride-now.html page
+      });
+      document.getElementById('ride-now-btn').addEventListener('click', function() {
+        window.location.href = 'riderdetail.html'; // Redirect to ride-now.html page
+      });
+
+      // Define a list of pickup and drop points
+      const pickupPoints = [
+        "Airport",
+        "City Center",
+        "Railway Station",
+        "Bus Stand",
+        "Mall",
+        "Park",
+        "Hotel",
+        "Office",
+        "Home"
+      ];
+
+      const dropPoints = [
+        "Office",
+        "Home",
+        "School",
+        "College",
+        "University",
+        "Library",
+        "Gym",
+        "Restaurant",
+        "Cinema"
+      ];
+
+      // Function to generate random pickup and drop points
+      function generatePoints() {
+        const pickupPoint = pickupPoints[Math.floor(Math.random() * pickupPoints.length)];
+        const dropPoint = dropPoints[Math.floor(Math.random() * dropPoints.length)];
+
+        // Update the HTML elements with the generated points
+        document.getElementById("review-rating").innerHTML = `Pick Up: ${pickupPoint}`;
+        document.getElementById("review-count").innerHTML = `Drop Point: ${dropPoint}`;
+      }
+
+      // Call the function to generate points when the page loads
+      generatePoints();
+    </script>
+</body>
+</html>

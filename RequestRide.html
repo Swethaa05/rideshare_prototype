@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<div class="container3">
+    <header>
+        <button class="back-button"></button>
+        <h1 >Request for Ride</h1>
+    </header>
+    <section class="location-info">
+        <div class="location">
+            <label for="current-location">📍 Current Location</label>
+            <input type="text" id="current-location" placeholder="Enter your location">
+        </div>
+        <div class="location">
+            <label for="office-location">🏢 Office</label>
+            <input type="text" id="office-location" placeholder="Enter office location">
+        </div>
+    </section>
+    
+    <button class="confirm-button" onclick="checkInputs()">Check Availability</button>
+
+    <script>
+        function checkInputs() {
+            const currentLocation = document.getElementById('current-location').value;
+            const officeLocation = document.getElementById('office-location').value;
+
+            if (currentLocation === '' || officeLocation === '') {
+                alert('Please enter both current location and office location');
+            } else {
+                window.location.href = 'seat.html';
+            }
+        }
+    </script>
+
+</div>
+</body>
+</html>

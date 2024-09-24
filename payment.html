@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wallet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container8">
+        <header>
+            <h2>My Wallet</h2>
+        </header>
+        
+        
+        <div class="option" onclick="redirectToPage('payment-method.html')">
+            <span class="icon">✔️</span>
+            <div>
+                <p class="option-title">Payment Methods</p>
+                <p class="option-subtitle">Select your payment type.</p>
+            </div>
+        </div>
+
+        <div class="option" onclick="redirectToPage('coupons.html')">
+            <span class="icon">🏷️</span>
+            <div>
+                <p class="option-title">Coupon</p>
+                <p class="option-subtitle">Invite friends and earn ₹RIDE.</p>
+            </div>
+        </div>
+
+        <div class="option" onclick="redirectToPage('crypto.html')">
+            <span class="icon">❌</span>
+            <div>
+                <p class="option-title">Crypto</p>
+                <p class="option-subtitle">Pay with other cryptocurrency.</p>
+            </div>
+        </div>
+    </div>
+     <script> 
+        function redirectToPage(page) {
+        window.location.href = "payment1.html";
+}
+     </script>
+    <script src="script.js"></script>
+</body>
+</html>

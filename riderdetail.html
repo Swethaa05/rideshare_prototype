@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Driver Details</title>
+</head>
+<body>
+    <div class="container11">
+        <h1>Rider Details</h1>
+
+                <h2 id="driver-name">Name:</h2><br>
+                <p><strong>OTP:</strong>:1234</p><br>
+                <p><strong></strong> <span id="pickup-point"></span></p><br>
+                <p><strong></strong> <span id="drop-off-point"></span></p><br>
+                <p><strong></strong> <span id="amount"></span></p><br>
+                <button id="contact-btn">Start Ride</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .container11 {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white;
+}
+
+.driver-info {
+    display: flex;
+    align-items: center;
+}
+
+.driver-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+h1 {
+    text-align: center;
+    color:white;
+}
+
+h2 {
+    margin: 0;
+}
+
+button {
+    background-color:#ff007a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff007a;
+}
+    </style>
+    <script>
+        // Define a list of names
+const names = [
+  "John Doe",
+  "Jane Smith",
+  "Bob Johnson",
+  "Alice Brown",
+  "Mike Davis",
+  "Emily Taylor",
+  "Sarah Lee",
+  "Kevin White",
+  "Lisa Hall",
+  "Tom Harris"
+];
+
+// Define a list of pickup points
+const pickupPoints = [
+  "chennai",
+  "Anna Nagar",
+  "PQR-9012",
+  "MNO-3456",
+  "STU-7890",
+  "VWX-4567",
+  "YZA-2345",
+  "BCD-6789",
+  "EFG-0123",
+  "HIJ-5678"
+];
+
+// Define a list of drop off points
+const dropOffPoints = [
+  "DEF-4567",
+  "GHI-8901",
+  "JKL-2345",
+  "MNO-5678",
+  "PQR-9012",
+  "STU-3456",
+  "VWX-6789",
+  "XYZ-0123",
+  "ABC-4567",
+  "EFG-8901"
+];
+
+// Define a list of amounts
+const amounts = [
+  "500",
+  "300",
+  "200",
+  "100",
+  "600",
+  "700",
+  "530",
+  "690",
+  "730",
+  "250"
+];
+
+// Function to generate random name, pickup point, drop off point, and amount
+function generateDetails() {
+  const name = names[Math.floor(Math.random() * names.length)];
+  const pickupPoint = pickupPoints[Math.floor(Math.random() * pickupPoints.length)];
+  const dropOffPoint = dropOffPoints[Math.floor(Math.random() * dropOffPoints.length)];
+  const amount = amounts[Math.floor(Math.random() * amounts.length)];
+
+  // Update the HTML elements with the generated details
+  document.getElementById("driver-name").innerHTML = `Name: ${name}`;
+  document.getElementById("pickup-point").innerHTML = `Pick Up: ${pickupPoint}`;
+  document.getElementById("drop-off-point").innerHTML = `Drop Off: ${dropOffPoint}`;
+  document.getElementById("amount").innerHTML = `Amount: ${amount}`;
+}
+
+// Call the function to generate details when the page loads
+generateDetails();
+
+// Add event listener to the contact button
+document.getElementById('contact-btn').addEventListener('click', function() {
+  alert('Ride Starting...');
+  // You can add more functionality here, like opening a chat or calling the driver.
+});
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
